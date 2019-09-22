@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.123.77.334:3306/mall_goods?useUnicode=true&characterEncoding=utf-8
+    hikari: # springboot 2.0 整合了hikari ,据说这是目前性能最好的java数据库连接池
+      username: root
+      password: 123456
+  redis:
+    host: 106.123.77.334
+    port: 6379
+    password: 123456
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+        min-idle: 0
+  jpa:
+    show-sql: true
+server:
+  port: 8081
+
+id:
+  start: 100
+  end: 500000
+
+filePath: D:\error.txt
+
+##定义页大小为100页
+pageSize: 100
+
+page:
+  start: 0
+  end: 15000
+
+error:
+  path: /ljj/java-script
+
+
+
+
+
